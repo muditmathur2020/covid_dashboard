@@ -1,7 +1,56 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+
+/* Main styles */
+
+  
 body{
   background-color: #B1D4E0;
+  margin-top: 13.5rem;
+  
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  
+  -webkit-animation: bg-scrolling-reverse .92s infinite; /* Safari 4+ */
+  -moz-animation:    bg-scrolling-reverse .92s infinite; /* Fx 5+ */
+  -o-animation:      bg-scrolling-reverse .92s infinite; /* Opera 12+ */
+  animation:         bg-scrolling-reverse .92s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear;
 margin: 0;
   height: 100vh;
   font-family: sans-serif;
@@ -41,26 +90,28 @@ body:before{
 overflow: auto;
 position : absolute;
 top: 50px;
+left:50px;
+font-family: Quicksand Light,Arial, Helvetica, sans-serif;
 float: center;
   z-index: 1;
-  width: 80%;
+  width: 50%;
   margin: 10 auto;
-    border-radius: 30px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
     padding: 2% 2% 2% 2%;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color:white;
     color: black;
-	border-width:50px;
-	border-color:black;
   
    /* background-color:#704270;*/
 }
 .board {
     column-count: 3;
-    column-gap: 2rem;
+    column-gap:5px;
 }
 .container h2 {
-    margin: 0 0 30px;
+    margin: 0 0 16px;
     text-align: center;
 }
 /*img#flag {
@@ -68,84 +119,175 @@ float: center;
     width: 20px;
 }*/
 .card {
-    height:50%;
-    width: 88%;
+  font-family: Quicksand light,Arial, Helvetica, sans-serif;
+    height:30px;
+    width: 150px;
+    vertical-align: middle;
    /* background: #ccc;*/
-    padding: 8%;
-    margin-bottom: 20px;
-	border-style:solid;
-	border-width:2px;
-	border-color:black;
-   
+    padding: 10%;
+   margin-bottom: 30px;
+    text-align: center;
     /*color: #fff;*/
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: black;
-	  text-align:center;
 }
 .card.a {
-    /*background: #C8A2C8*/
-	    border-color: red;
-    border-width: 5px;
-    border-style: solid;
+  border-color:red;
+  color:red;
+  border-bottom: 2px;
+border-style: solid;
     background-color: transparent;
-	
+
 text-align:center;
 }
 .card.cr {
-	    border-color: yellow;
-    border-width: 5px;
+      border-color:rgb(221, 221, 0);
+      border-bottom: 2px;
+      color:rgb(221, 221, 0);
     border-style: solid;
+    box-shadow: 2px 2px 10px 25 #151515;
   background-color: transparent;
 text-align:center;
 }
 .card.r {
-	    border-color: green;
-    border-width: 5px;
-    border-style: solid;
+  border-color:green;
+  border-bottom: 2px;
+  color:green;
+border-style: solid;
   background-color: transparent;
 text-align:center;
+
 }
 .card.ca {
-	    border-color: black;
-    border-width: 5px;
-    border-style: solid;
+  border-color:black;
+  border-bottom: 2px;
+border-style: solid;
   background-color: transparent;
 text-align:center;
+vertical-align: auto;
+
 }
 .card.d {
-	    border-color: black;
-    border-width: 5px;
-    border-style: solid;
+  border-color:black;
+  border-bottom: 2px;
+border-style: solid;
 background-color: transparent;
 text-align:center;
+
 }
 .card.t {
-	    border-color: black;
-    border-width: 5px;
-    border-style: solid;
+  border-color:black;
+  border-bottom: 2px;
+border-style: solid;
   background-color: transparent;
-text-align:center;
+    text-align:center;
+ 
 }
 h2 {
+  font-family: Quicksand Light,Arial, Helvetica, sans-serif;
   outline-width: 8px black;
   
 }
 .card h5 {
     margin: 0;
+    vertical-align: middle;
     font-size: 1rem;
     color:black;
-    font-family: 'Poppins Light 200', sans-serif;
+    font-family: Quicksand Light,Arial, Helvetica, sans-serif;
 }
 .card span {
+  vertical-align: middle;
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: Quicksand Light,Arial, Helvetica, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter;
+    display: inline-block;
+    position: relative;
+    animation-duration: 10s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+    
+}
+.card span::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
 }
 .card i {
   font-family: 'Poppins', sans-serif;
     font-size: 3rem;
+}
+a.myButton {
+  overflow: auto;
+  position : absolute;
+  height:30px;
+  width: 250px;
+  top: 150px;
+  right:250px;
+  align-items: center;
+  justify-content: center;
+	background-color:transparent;
+  border-radius:10px ;
+  border-style: solid;
+	display:inline-block;
+	cursor:pointer;
+	color:#151515;
+	font-family:Verdana;
+	font-size:18px;
+	padding:16px 16px;
+	text-decoration:none;
+}
+a.myButton:hover {
+  background-color:#001f1f;
+  color: #f3f3f3;
+}
+
+a.myButton2 {
+  align-items: center;
+  justify-content: center;
+  height:30px;
+  width: 250px;
+  overflow: auto;
+  position : absolute;
+  top: 250px;
+  right:250px;
+	background-color:transparent;
+  border-radius:10px ;
+  border-style: solid;
+	display:inline-block;
+	cursor:pointer;
+	color:#151515;
+	font-family:Verdana;
+	font-size:18px;
+	padding:16px 16px;
+	text-decoration:none;
+}
+a.myButton2:hover {
+  background-color:#001f1f;
+  color: #f3f3f3;
+}
+
+
+
+@keyframes typewriter {
+  0%, 100% {
+    width: 0;
+  }
+  20%, 80% {
+    width: 10.2em;
+  }
+}
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 768px){
   .board {
@@ -159,20 +301,5 @@ h2 {
   .board {
     column-count: 1;
   }
-}
-#i1
-{ 
-
-	vertical-align:baseline;
-}
-#i2
-{
-
-	vertical-align:baseline;
-}
-#i3
-{
-	
-	vertical-align:baseline;
 }
 
