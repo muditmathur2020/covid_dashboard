@@ -1,0 +1,165 @@
+
+
+
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+}
+
+$particleSize: 20vmin;
+$animationDuration: 6s;
+$amount: 20;
+.background span {
+  width: $particleSize;
+  height: $particleSize;
+  border-radius: $particleSize;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-duration: $animationDuration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  $colors: (
+   #e8505b,
+    #900d0d,
+    #dd2c00
+  );
+  @for $i from 1 through $amount {
+    &:nth-child(#{$i}) {
+      color: nth($colors, random(length($colors)));
+      top: random(100) * 1%;
+      left: random(100) * 1%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+      animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+      $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+      $x: if(random() > 0.5, -1, 1);
+      box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+    }
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body:after{
+  position: absolute;
+  content: "";
+  background: #151515;
+  width: 100%;
+  height: 50%;
+  top: 0;
+}
+body:before{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+}
+.container {
+position : absolute;
+top: 16px;
+align: center;
+  z-index: 1;
+  width: 40%;
+  margin: 0 auto;
+    border-radius: 24px;
+    padding: 2%;
+    background-color:#707070;
+}
+.board {
+    column-count: 3;
+    column-gap: 1rem;
+}
+.container h2 {
+    margin: 0 0 30px;
+    text-align: center;
+}
+img#flag {
+    height: 20px;
+    width: 20px;
+}
+.card {
+    width: 88%;
+    background: #ccc;
+    padding: 8%;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    color: #fff;
+	text-align:center;
+}
+.card.a {
+    background: #41a7ff;
+text-align:center;
+}
+.card.cr {
+    background: #ff3434;
+text-align:center;
+}
+.card.r {
+    background: #32b336;
+text-align:center;
+}
+.card.ca {
+    background: #d83f3f;
+text-align:center;
+}
+.card.d {
+    background: #ff0053;
+text-align:center;
+}
+.card.t {
+    background: #ffa501;
+text-align:center;
+}
+.card h5 {
+    margin: 0;
+    font-size: 1rem;
+}
+.card span {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.card i {
+    font-size: 3rem;
+}
+@media screen and (max-width: 768px){
+  .board {
+    column-count: 2;
+  }
+  .card span {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .board {
+    column-count: 1;
+  }
+}
+
