@@ -1,24 +1,25 @@
 <html>
 <head>
-<h1><b>Book Your COVID Test</b></h1>
+<h1 align=center><b>Book Your COVID Test</b></h1>
 </head>
-<body><br>
+<link rel="stylesheet" href="form1.css">
+<body>
 <form action="insert.php" method="POST">
-  <label for="Fname">First Name:</label><br>
+  <label for="Fname" id="namecss">First Name:  </label>
   <input type="text"  id="fname" name="fname" required><br><br>
-  <label for="Lname">Last Name:</label><br>
+  <label for="Lname" id="lnamecss">Last Name:  </label>
   <input type="text"  id="lname" name="lname" required><br><br>
-  <label for="City"> City:</label><br>
+  <label for="City" id="citycss"> City:  </label>
   <input type="text"  id="cityn" name="cityn" required><br><br>
-  <label for="address"> Address:</label><br>
+  <label for="address"id="addcss"> Address:  </label>
   <input type="text"  id="addt" name="addt" required><br><br>
-  Any of the symtoms:<br>
+  <h2>Any of the symtoms:</h2><br>
   <input type="text"  id="s1" name="s1" >
-  <label for="text"> Fever</label><br>
+  <label for="text"id="fevercss"> Fever</label><br>
   <input type="text" id="s2" name="s2" >
-  <label for="s2"> Tiredness</label><br>
+  <label for="s2" id="tirednesscss"> Tiredness</label><br>
   <input type="text" id="s3" name="s3" >
-  <label for="s3"> Dry Cough</label><br><br>
+  <label for="s3" id="dccss"> Dry Cough</label><br><br>
 <input type="submit" value="Submit">
 </body>
 </html>
