@@ -34,7 +34,7 @@ $dc=$_POST['s3'];
       $stmt->execute();
       echo "New record inserted sucessfully";
      } else {
-      echo "Someone already used this identity to report";
+      echo "Someone already used this identity";
 			}
      $stmt->close();
      $conn->close();
