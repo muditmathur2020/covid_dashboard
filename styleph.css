@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+body{
+/* Main styles */
+/*color: #999;*/
+/*font: 400 16px/1.5 exo, ubuntu, "quicksand", helvetica, arial, sans-serif;*/
+text-align: center;
+font-family: quicksand light,Arial, Helvetica, sans-serif;
+/* img size is 50x50 */
+background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+
+-webkit-animation: bg-scrolling-reverse .92s infinite; /* Safari 4+ */
+-moz-animation:    bg-scrolling-reverse .92s infinite; /* Fx 5+ */
+-o-animation:      bg-scrolling-reverse .92s infinite; /* Opera 12+ */
+animation:         bg-scrolling-reverse .92s infinite; /* IE 10+ */
+-webkit-animation-timing-function: linear;
+-moz-animation-timing-function:    linear;
+-o-animation-timing-function:      linear;
+animation-timing-function:         linear;}
+#namecss{
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;
+}
+#lnamecss{
+  
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+#addcss{
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+#medcss{
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+
+#addt{
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;
+    position: absolute;
+    right:300px;
+    height:100px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+}
+div{
+    margin:auto;
+    width:50%;
+    align-content: center;
+}
+#fname{
+    font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+#lname{font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+#amt{font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+#med{font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+    div{
+        width:50%;
+        margin: auto;
+        align-content: flex-end;
+    }
+form{
+    left:450px;
+    text-align: start;
+}
+
+.submit{  
+    border: 2px;
+    overflow: auto;
+    margin: auto;
+    height:60px;
+    width: 400px;
+    top:500px;
+    align-items: center;
+    justify-content: center;
+      background-color:#151515;
+    border-radius:10px ;
+    border-style: solid;
+      display:inline-block;
+      cursor:pointer;
+      color:#f3f3f3;
+      font-family:Verdana;
+      font-size:18px;
+      padding:16px 16px;
+      text-decoration:none;
+}

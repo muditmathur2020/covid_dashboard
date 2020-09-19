@@ -1,12 +1,9 @@
 <?php
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
-$cityn=$_POST['cityn'];
 $addt=$_POST['addt'];
-$f=$_POST['s1'];
-$t=$_POST['s2'];
-$dc=$_POST['s3'];
- if(!empty($fname) ||!empty($lname) ||!empty($city) ||!empty($addt) || !empty($f) ||!empty($t) || !empty($dc))
+$med=$_POST['med'];
+ if(!empty($fname) ||!empty($lname) ||!empty($addt) ||!empty($med))
  {
 	$host="localhost";
 	$dbUsername="root";
@@ -18,8 +15,8 @@ $dc=$_POST['s3'];
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     } 
 	 else {
-     $SELECT = "SELECT fname From backend Where fname = ? Limit 1";
-     $INSERT = "INSERT Into backend (fname, lname, cityn, addt, f, t, dc) values(?, ?, ?, ?, ?, ?, ?)";
+     $SELECT = "SELECT fname From pharma Where fname = ? Limit 1";
+     $INSERT = "INSERT Into pharma (fname, lname, addt, med) values(?, ?, ?, ?)";
      //Prepare statement
      $stmt = $conn->prepare($SELECT);
      $stmt->bind_param("s", $fname);
@@ -30,7 +27,7 @@ $dc=$_POST['s3'];
      if ($rnum==0) {
       $stmt->close();
       $stmt = $conn->prepare($INSERT);
-      $stmt->bind_param("sssssss", $fname, $lname, $cityn, $addt, $f, $t, $dc);
+      $stmt->bind_param("ssss", $fname, $lname, $addt, $med);
       $stmt->execute();
       echo "New record inserted sucessfully";
      } else {
