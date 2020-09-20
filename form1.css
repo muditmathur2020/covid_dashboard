@@ -1,45 +1,198 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+body{
+/* Main styles */
+/*color: #999;*/
+/*font: 400 16px/1.5 exo, ubuntu, "quicksand", helvetica, arial, sans-serif;*/
+text-align: center;
+font-family: quicksand light,Arial, Helvetica, sans-serif;
+/* img size is 50x50 */
+background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+
+-webkit-animation: bg-scrolling-reverse .92s infinite; /* Safari 4+ */
+-moz-animation:    bg-scrolling-reverse .92s infinite; /* Fx 5+ */
+-o-animation:      bg-scrolling-reverse .92s infinite; /* Opera 12+ */
+animation:         bg-scrolling-reverse .92s infinite; /* IE 10+ */
+-webkit-animation-timing-function: linear;
+-moz-animation-timing-function:    linear;
+-o-animation-timing-function:      linear;
+animation-timing-function:         linear;}
 #namecss{
-font-size:30px;
-}
-#lnamecss
-{
-	font-size:30px;
 
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;
 }
-#citycss
-{
-	font-size:30px;
-
-
+    div{
+        width:50%;
+        margin: auto;
+        align-content: flex-end;
+    }
+form{
+  left:450px;
+  text-align: start;
 }
+#lnamecss{
+
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
 #addcss{
-	font-size:30px;
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+#citycss{
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
 
+#addt{
+    font-size: 22px;
+    font-family: quicksand,Arial, Helvetica, sans-serif;
+    position: absolute;
+    right:300px;
+    height:100px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
 }
+
+#fname{
+    font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+#lname{font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+#cityn{
+    font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+
+
+#s1
+{
+    font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;}
+	
+#s2
+{
+    font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;
+}
+#s3{
+
+    font-size: 22px;
+    position: absolute;
+    right:300px;
+    height:50px;
+    width: 500px;
+    border-radius: 10px;
+    border:2px #151515;
+    border-style: solid;
+    font-family: quicksand,Arial, Helvetica, sans-serif;
+}
+
+form{
+    left:450px;
+    text-align: start;
+}
+
+.Submit{  
+  border: 2px;
+  overflow: auto !important;
+  margin: auto !important;
+  height:60px;
+  width: 400px;
+  top:500px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color:#151515;
+  border-radius:10px ;
+  border-style: solid;
+  display:inline-block;
+    cursor:pointer;
+    color:#f3f3f3;
+    font-family:Verdana;
+    font-size:18px;
+    padding:16px 16px;
+    text-decoration:none;
+}
+
 #fevercss
 {
-	font-size:30px;
-	background-color:red;
+	font-size:22px;
 }
 #tirednesscss
 {
-	font-size:30px;
-	background-color:red;
+	font-size:22px;
 }
 #dccss{
-	font-size:30px;
-	background-color:red;
+	font-size:22px;
 }
 #s1{
-	font-size:30px;
+	font-size:22px;
 }
 #s2{
-	font-size:30px;
+	font-size:22px;
 }
 #s3{
-	font-size:30px;
+	font-size:22px;
 }
-#fname{font-size:30px;}
-#lname{font-size:30px;}
-#cityn{font-size:30px;}
-#addt{font-size:30px;}
+

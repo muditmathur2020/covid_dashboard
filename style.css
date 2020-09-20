@@ -35,12 +35,9 @@
   
 body{
   background-color: #B1D4E0;
-  margin-top: 13.5rem;
   
   color: #999;
-  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   text-align: center;
-  /* img size is 50x50 */
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
   
   -webkit-animation: bg-scrolling-reverse .92s infinite; /* Safari 4+ */
@@ -51,12 +48,12 @@ body{
   -moz-animation-timing-function:    linear;
   -o-animation-timing-function:      linear;
   animation-timing-function:         linear;
-margin: 0;
   height: 100vh;
   font-family: sans-serif;
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
+ 
 }
 @keyframes gradient {
 	0% {
@@ -69,32 +66,35 @@ margin: 0;
 		background-position: 0% 50%;
 	}
 }
-/*body:after{
-  position: absolute;
-  content: "";
-  background: #ADD8E6;
-  width: 100%;
-  height: 50%;
-  top: 0;
+.nam{
+  text-align: center;
 }
-body:before{
-  position: absolute;
-  content: "";
-  /*background-color:#FFFFF0; 
-  width: 100%;
-  height: 50%;
-  bottom: 0;
-}*/
+.nam h1{
+  text-align: center;
+  top:5%;
+  vertical-align: top;
+  font-family: Quicksand Light,Arial, Helvetica, sans-serif;
+  font-size:200%;
+  color: #151515;
+}
+.nam h4{
+  text-align: center;
+  font-family: Quicksand Light,Arial, Helvetica, sans-serif;
+  top:5%;
+  color: #202020;
+  font-style: italic;
+}
 .container {
 			
 overflow: auto;
 position : absolute;
-top: 50px;
-left:50px;
-font-family: Quicksand Light,Arial, Helvetica, sans-serif;
+top: 20%;
+left:8%;
+font-family: Quicksand ExtraLight,Arial, Helvetica, sans-serif;
 float: center;
   z-index: 1;
   width: 50%;
+  align-items: center;
   margin: 10 auto;
     border-radius: 10px;
     border-width: 2px;
@@ -108,7 +108,8 @@ float: center;
 }
 .board {
     column-count: 3;
-    column-gap:5px;
+    columns: gap 0.75em;
+    row-gap: .75rem;
 }
 .container h2 {
     margin: 0 0 16px;
@@ -120,15 +121,33 @@ float: center;
 }*/
 .card {
   font-family: Quicksand light,Arial, Helvetica, sans-serif;
-    height:30px;
-    width: 150px;
+    height:3vw;
+    width: 10vw;
     vertical-align: middle;
    /* background: #ccc;*/
-    padding: 10%;
-   margin-bottom: 30px;
+    padding: 2rem;
+   margin-bottom: 0.75rem;
     text-align: center;
     /*color: #fff;*/
 }
+.card3{
+  position:absolute;
+	font-family: Quicksand light,Arial, Helvetica, sans-serif;
+  top:10%;
+  right:8%;
+  height:20%;
+   background-color:#151515;
+   color:white;
+    padding: 10px;
+}
+.card-content{
+  margin:auto;
+  text-align: justify;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
 .card.a {
   border-color:red;
   color:red;
@@ -189,7 +208,7 @@ h2 {
 .card h5 {
     margin: 0;
     vertical-align: middle;
-    font-size: 1rem;
+    font-size: 100%;
     color:black;
     font-family: Quicksand Light,Arial, Helvetica, sans-serif;
 }
@@ -211,7 +230,7 @@ h2 {
 }
 .card span::after {
   content: "|";
-  position: absolute;
+  position: relative;
   right: 0;
   animation: caret infinite;
   animation-duration: 1s;
@@ -224,10 +243,11 @@ h2 {
 a.myButton {
   overflow: auto;
   position : absolute;
-  height:30px;
-  width: 250px;
-  top: 150px;
-  right:250px;
+  height:5%;
+  width: 24%;
+  top: 55%;
+  right:8%;
+  border:2px;
   align-items: center;
   justify-content: center;
 	background-color:transparent;
@@ -237,24 +257,25 @@ a.myButton {
 	cursor:pointer;
 	color:#151515;
 	font-family:Verdana;
-	font-size:18px;
-	padding:16px 16px;
+	font-size:100%;
+	padding:1% 1%;
 	text-decoration:none;
 }
 a.myButton:hover {
-  background-color:#001f1f;
+  background-color:#151515;
   color: #f3f3f3;
 }
 
 a.myButton2 {
+  border:2px;
   align-items: center;
   justify-content: center;
-  height:30px;
-  width: 250px;
+  height:5%;
+  width: 24%;
   overflow: auto;
   position : absolute;
-  top: 250px;
-  right:250px;
+  right:8%;
+  top:67%;
 	background-color:transparent;
   border-radius:10px ;
   border-style: solid;
@@ -262,16 +283,18 @@ a.myButton2 {
 	cursor:pointer;
 	color:#151515;
 	font-family:Verdana;
-	font-size:18px;
-	padding:16px 16px;
+	font-size:100%;
+	padding:1% 1%;
 	text-decoration:none;
 }
 a.myButton2:hover {
-  background-color:#001f1f;
+  background-color:#151515;
   color: #f3f3f3;
 }
 
-
+.card-link{
+	color: #f3f3f3;
+}
 
 @keyframes typewriter {
   0%, 100% {
@@ -292,14 +315,19 @@ a.myButton2:hover {
 @media screen and (max-width: 768px){
   .board {
     column-count: 2;
+    column-width: auto;
+  }
+  .card h2{
+    font-size:.5rem;
   }
   .card span {
-    font-size: 2.5rem;
+    font-size: 0.5rem;
   }
 }
 @media screen and (max-width: 500px){
   .board {
     column-count: 1;
+
   }
 }
 
